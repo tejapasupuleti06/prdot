@@ -5,9 +5,17 @@ import { siteData, gallery } from "../data/salonData";
 import salonHeroInterior from "../assets/salon_hero_interior.jpg";
 import satishPhoto from "../assets/satish_founder.jpg";
 
-export default function Hero({ onOpenBooking, onScrollTo, onOpenServices, onOpenPackages }) {
+export default function Hero({ 
+  onOpenBooking, 
+  onScrollTo, 
+  onOpenServices, 
+  onOpenPackages,
+  isIntroComplete = false 
+}) {
   const heroTools = useRef([]);
   const [isFlipped, setIsFlipped] = useState(false);
+  const autoFlippedRef = useRef(false);
+  const autoFlipTimerRef = useRef(null);
 
   useEffect(() => {
     // Gentle floating animation for background barber tools
@@ -29,6 +37,28 @@ export default function Hero({ onOpenBooking, onScrollTo, onOpenServices, onOpen
 
     return () => ctx.revert();
   }, []);
+
+  // Automatically flip card after scissors loader intro finishes
+  useEffect(() => {
+    if (isIntroComplete && !autoFlippedRef.current) {
+      autoFlippedRef.current = true;
+      autoFlipTimerRef.current = setTimeout(() => {
+        setIsFlipped(true);
+      }, 850);
+
+      return () => {
+        if (autoFlipTimerRef.current) clearTimeout(autoFlipTimerRef.current);
+      };
+    }
+  }, [isIntroComplete]);
+
+  const handleCardClick = () => {
+    if (autoFlipTimerRef.current) {
+      clearTimeout(autoFlipTimerRef.current);
+      autoFlipTimerRef.current = null;
+    }
+    setIsFlipped((prev) => !prev);
+  };
 
   return (
     <section id="home" className="hero">
@@ -99,18 +129,16 @@ export default function Hero({ onOpenBooking, onScrollTo, onOpenServices, onOpen
       {/* 3D Cylindrical Flip Card (Shop Photo <-> Owner Satish) */}
       <div
         className={`hero-cylinder-stage ${isFlipped ? "is-flipped" : ""}`}
-        onMouseEnter={() => {
-          if (typeof window !== "undefined" && window.matchMedia && window.matchMedia("(hover: hover)").matches) {
-            setIsFlipped(true);
+        onClick={handleCardClick}
+        title={isFlipped ? "Click or tap to view salon interior" : "Click or tap to meet founder Satish"}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            handleCardClick();
           }
         }}
-        onMouseLeave={() => {
-          if (typeof window !== "undefined" && window.matchMedia && window.matchMedia("(hover: hover)").matches) {
-            setIsFlipped(false);
-          }
-        }}
-        onClick={() => setIsFlipped((prev) => !prev)}
-        title="Hover or click to meet founder Satish"
       >
         <div className="cylinder-card">
           {/* Front Face: Authentic Shop Interior */}

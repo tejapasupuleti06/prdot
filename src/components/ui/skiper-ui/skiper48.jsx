@@ -8,17 +8,15 @@ import {
   CheckCircle2,
   Volume2
 } from "lucide-react";
-import { EffectCards, Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { cn } from "../../../lib/utils";
 
 /**
- * Skiper48 - Card swipe carousel with 3D stacking effect and gesture controls
- * Adapted from @skiper-ui/skiper48 for PR Men Dot Salon Artisan Barber Tools
+ * Normal smooth sliding card carousel for PR Men Dot Salon Artisan Barber Tools on mobile
  */
 export default function Skiper48Cards({
   tools = [],
@@ -44,7 +42,7 @@ export default function Skiper48Cards({
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={cn("skiper48-stage relative w-full flex flex-col items-center", className)}
     >
-      {/* 3D Cards Swiper Container */}
+      {/* Sliding Cards Swiper Container */}
       <div className="skiper48-cards-wrap relative w-full flex items-center justify-center">
         {/* Navigation Arrow Left */}
         <button
@@ -61,20 +59,22 @@ export default function Skiper48Cards({
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
-          effect="cards"
+          slidesPerView={1}
+          spaceBetween={18}
+          centeredSlides={true}
+          speed={400}
           grabCursor={true}
-          cardsEffect={{
-            slideShadows: true,
-            perSlideRotate: 3.5,
-            perSlideOffset: 12
-          }}
           observer={true}
           observeParents={true}
-          modules={[EffectCards, Navigation, Pagination]}
+          modules={[Navigation, Pagination]}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
           onSlideChange={(swiper) => {
             if (onIndexChange) onIndexChange(swiper.activeIndex);
           }}
-          className="skiper48-swiper"
+          className="skiper48-swiper normal-slide-swiper"
         >
           {tools.map((tool, idx) => {
             const isCurrent = activeIndex === idx;
@@ -142,7 +142,7 @@ export default function Skiper48Cards({
 
                   {/* Subtle Swipe / Drag Indicator at bottom */}
                   <div className="skiper-card-swipe-cue">
-                    <span>SWIPE OR DRAG TO SHUFFLE DECK ↔</span>
+                    <span>SWIPE LEFT OR RIGHT TO SLIDE ↔</span>
                   </div>
                 </div>
               </SwiperSlide>
@@ -165,10 +165,10 @@ export default function Skiper48Cards({
       {/* Interactive Deck Hint */}
       <div className="skiper-deck-indicator">
         <span className="deck-counter-badge">
-          CARD {activeIndex + 1} OF {tools.length}
+          TOOL {activeIndex + 1} OF {tools.length}
         </span>
         <span className="deck-gesture-hint">
-          👆 Swipe left or right • Drag to peel card • Tap to test audio & specs
+          👆 Swipe left or right to slide cards • Tap to open sensory lab
         </span>
       </div>
     </motion.div>

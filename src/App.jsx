@@ -63,6 +63,7 @@ export default function App() {
             onScrollTo={scrollTo}
             onOpenServices={() => setServicesPopoutOpen(true)}
             onOpenPackages={() => setPackagesPopoutOpen(true)}
+            isIntroComplete={!showScissorsLoader}
           />
           <IntroPhilosophy onScrollTo={scrollTo} />
           
