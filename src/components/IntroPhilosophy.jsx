@@ -1,14 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
   ArrowRight,
-  Sparkles,
+  Scissors,
+  Star,
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
   RotateCcw
 } from "lucide-react";
 import ToolSensoryModal from "./ToolSensoryModal";
-import Skiper48Cards from "./ui/skiper-ui/skiper48";
+import Skiper49Cards from "./ui/skiper-ui/skiper49";
 
 export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
   const [activeTool, setActiveTool] = useState(null);
@@ -35,7 +36,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       badge: "440C Cobalt Alloy",
       headline: "Hand-Honed Convex Shears vs. Machine Clippers",
       sensation: "The rhythmic, crisp snip of hand-honed steel",
-      desc: "We don't use single all-purpose scissors. Our station features a bespoke bunch of hand-forged Japanese shears: 6-inch convex shears for sharp cutting lines, 30-tooth blending shears for seamless weight removal, and micro-curved shears for clean ear tapers.",
+      desc: "Hand-honed Takefu Japanese cobalt shears for surgical slicing, zero split ends, and natural hair movement.",
       craftDetail: "Honed to a surgical 45° convex angle for zero hair pulling, zero split ends, and featherlight point texturizing.",
       deepPhilosophy: "Most commercial salons use machine clippers for raw speed, which blunts hair ends horizontally and causes rough regrowth. We believe a bespoke hand-sheared cut gives hair natural movement, conforms to your cranial bone structure, and retains its shape for weeks without collapsing.",
       whyWeUseIt: "Hand-forged Takefu 440C cobalt alloy shears create a surgical 45-degree angle slice that prevents split ends, seals hair cuticle ends naturally, and creates soft organic feathering that grows out seamlessly over 4 to 6 weeks.",
@@ -58,7 +59,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       badge: "110,000 RPM Brushless",
       headline: "Controlled Tourmaline Heat & Volume Lock",
       sensation: "Warm targeted breeze lifting roots & sealing cuticles",
-      desc: "A great haircut is perfected in the blow dry. Our high-torque ionic dryers emit tourmaline negative ions that seal hair cuticles, eliminate humidity frizz, and lock your quiff or crop into all-day natural shape.",
+      desc: "110,000 RPM digital ionic dryer neutralizing frizz and sealing volume at a calibrated, gentle 57°C.",
       craftDetail: "Equipped with precision directional nozzles that sculpt volume without heat damage or scalp irritation.",
       deepPhilosophy: "A cut is only as good as its thermal lock. Cheap salon hair dryers blast scorching, uncontrolled heat that blisters hair cuticles and leaves scalp stinging. Our digital brushless motor produces high-velocity airflow at a calibrated 57°C, neutralizing static with 20 million negative ions per cm³.",
       whyWeUseIt: "The micro-focused ionic airstream closes the microscopic scales of each hair shaft, reflecting natural light for editorial shine while lifting root follicles so your fade or textured crop stays elevated all day without stiff lacquer.",
@@ -81,7 +82,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       badge: "0.3mm Ultra-Fine Dispersion",
       headline: "Pressurized Micro-Mist Hydration System",
       sensation: "Ultra-fine cool mist prepping hair for the razor",
-      desc: "Forget clumsy dripping squeeze bottles. We use continuous pressurized mist bottles with purified water and cooling aloe vera that evenly dampen hair for razor-accurate sectioning and effortless comb parting.",
+      desc: "Continuous 0.3mm pressurized aloe vera mist evenly hydrating hair fibers for smooth, frictionless shearing.",
       craftDetail: "Distributes micro-fine droplets that hydrate hair fibers without soaking your collar or running down your neck.",
       deepPhilosophy: "Standard squirt bottles drench the client unevenly, creating cold puddles that run down your neck and soak your collar. Our pressurized 0.3mm dispersal system atomizes purified water and aloe vera into a suspended cloud of micro-mist.",
       whyWeUseIt: "Even hydration allows our Japanese shears to glide effortlessly through hair strands without hair tugging or uneven cutting tension. The aloe vera extract calms the scalp and prepares the hair shaft for surgical sectioning.",
@@ -104,7 +105,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       badge: "7,200 RPM High-Torque",
       headline: "Skeleton T-Blade Precision Architecture",
       sensation: "Low-hum vibration carving crisp edges & skin fades",
-      desc: "Powered by cordless magnetic motors delivering 7,200 strokes per minute, our skeleton T-blade detailers and dual-foil shavers carve razor-sharp temple arches, beard boundaries, and skin-tight necklines.",
+      desc: "7,200 SPM magnetic motor detailers calibrated to a 0.1mm zero-gap flush for crisp lines without irritation.",
       craftDetail: "Equipped with Black Diamond Carbon blades that stay cool during long trims, providing irritation-free zero-gap precision.",
       deepPhilosophy: "Standard consumer trimmers snag on thick hair and generate friction heat against tender neck skin, causing razor burn. Our stations feature skeleton linear magnetic motor detailers calibrated to a true 0.1mm zero-gap flush.",
       whyWeUseIt: "Coated with Diamond-Like Carbon (DLC), the cutting teeth oscillate at 7,200 strokes per minute while operating 40% cooler. This allows our barbers to sculpt surgical hairlines, razor-sharp temple arches, and skin-tight fades with zero razor bumps.",
@@ -127,7 +128,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       badge: "Bentonite & Organic Beeswax",
       headline: "Pliable Natural Hold & Cedarwood Aroma",
       sensation: "Warm cedarwood aroma & touchable matte texture",
-      desc: "The finishing touch that defines your presence. We warm natural styling clay and organic beeswax pomade between our palms to emulsify natural argan oils, giving your haircut flexible all-day hold with zero greasy shine.",
+      desc: "Natural volcanic bentonite clay & organic beeswax providing touchable matte hold with a warm cedarwood aroma.",
       craftDetail: "Washes out clean with plain water. Enriched with cedarwood, amber, and bentonite clay for a textured, thicker hair appearance.",
       deepPhilosophy: "Supermarket hair gels suffocate scalp pores with synthetic petroleum silicones, causing dandruff and artificial helmet hair. We formulate our styling clay with natural volcanic bentonite and organic beeswax enriched with cedarwood, amber, and argan oils.",
       whyWeUseIt: "Hand-warmed between the barber's palms, it coats each strand with invisible textured volume, giving you touchable memory you can reshape all day long, and rinses out completely in a single warm water wash.",
@@ -150,7 +151,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       badge: "120°F Turkish Cotton Steam",
       headline: "Aromatherapy Hot Steam Facial Wrap",
       sensation: "120°F soothing steam melting away daily tension",
-      desc: "The heartbeat of traditional barbershop luxury. Plush 100% Turkish cotton towels infused with eucalyptus and lavender steam wrapped around your face to soften coarse beard whiskers, open pores, and clear mental fatigue.",
+      desc: "120°F plush Turkish cotton towel infused with calming eucalyptus steam to soften whiskers and relieve stress.",
       craftDetail: "Softens coarse hair follicles for a frictionless straight-razor shave while releasing neck and facial tension.",
       deepPhilosophy: "More than skin preparation, the hot towel wrap is a sensory sanctuary. We infuse 100% long-staple Turkish cotton towels with organic eucalyptus and lavender botanicals, calibrated to a therapeutic 120°F (49°C).",
       whyWeUseIt: "When wrapped over your facial contours, the moist herbal heat softens coarse beard whiskers by 65% for frictionless single-stroke shaving, opens pores for detoxifying face scrubs, and soothes eye strain and mental fatigue.",
@@ -297,8 +298,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
             <em>A feeling.</em>
           </h2>
           <div className="intro-badge-pill">
-            <Sparkles size={13} className="gold-icon" />
-            <span>THE 6 SENSORY BARBER ESSENTIALS</span>
+            <Scissors size={13} className="gold-icon" /> <span>THE 6 BARBER ESSENTIALS</span>
           </div>
         </div>
 
@@ -328,7 +328,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
         </div>
       </div>
 
-      {/* Sensory Salon Tools: Dual Mode (Desktop: Old Overlapping Deck, Mobile: Skiper48 Swipe) */}
+      {/* Sensory Salon Tools: Dual Mode (Desktop: Old Overlapping Deck, Mobile: skiper49 Swipe) */}
       <div className="salon-tools-section">
         <div className="tools-section-header">
           <div>
@@ -437,8 +437,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
                       {/* Visual Focus Beacon */}
                       {isFocused && (
                         <div className="tool-focused-beacon">
-                          <Sparkles size={11} />
-                          <span>SPOTLIGHTED • CLICK TO POP OUT</span>
+                          <Star size={11} /> <span>SPOTLIGHTED • TAP TO OPEN</span>
                         </div>
                       )}
 
@@ -517,9 +516,9 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
           </div>
         </div>
 
-        {/* MOBILE WEBSITE VIEW: 3D Cards Stacking & Swipe Carousel (@skiper-ui/skiper48) */}
+        {/* MOBILE WEBSITE VIEW: 3D Cards Stacking & Swipe Carousel (@skiper-ui/skiper49) */}
         <div className="mobile-tools-deck">
-          <Skiper48Cards
+          <Skiper49Cards
             tools={salonTools}
             activeIndex={activeToolIndex}
             onIndexChange={(idx) => {

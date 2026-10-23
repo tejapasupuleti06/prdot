@@ -3,15 +3,15 @@ import salonHeroInterior from "../assets/salon_hero_interior.jpg";
 export const siteData = {
   name: "PR MEN DOT",
   subtitle: "SALOON & BEAUTY",
-  location: "Madhurawada, Visakhapatnam",
-  fullAddress: "Raja Rajeswari Temple, Mithilapuri Colony, Madhurawada, Visakhapatnam, Andhra Pradesh 530041",
-  landmark: "Near Raja Rajeswari Temple, Mithilapuri Colony",
+  location: "Madhurawada, Bakkanapalem, Vizag",
+  fullAddress: "Police Station Road, beside APGV Bank, SBI Colony, Madhurawada, Bakkanapalem, Andhra Pradesh 530048",
+  landmark: "Beside APGV Bank, Police Station Road, SBI Colony",
   phone: "8309583129",
   displayPhone: "+91 83095 83129",
   whatsapp: "918309583129",
   whatsappLink: "https://wa.me/918309583129",
   telLink: "tel:+918309583129",
-  mapLink: "https://www.google.com/maps/search/?api=1&query=Pr+Men+Dot+Saloon+and+Beauty+Raja+Rajeswari+Temple+Mithilapuri+Colony+Madhurawada+Visakhapatnam",
+  mapLink: "https://www.google.com/maps/search/?api=1&query=Police+Station+Road+APGV+Bank+SBI+Colony+Madhurawada+Bakkanapalem+Visakhapatnam+530048",
   instagram: "https://instagram.com",
   hours: "Open Daily • 8:30 AM – 10:00 PM",
   tagline: "CUT · TRIM · STYLE · CARE",
@@ -20,48 +20,66 @@ export const siteData = {
 
 export const serviceCategories = [
   { id: "all", label: "ALL SERVICES", icon: "✂️" },
-  { id: "hair", label: "HAIR STYLING & CUTS", icon: "✂" },
-  { id: "beard", label: "BEARD GROOMING", icon: "◈" },
-  { id: "color", label: "HAIR COLOR & GREY", icon: "◉" },
-  { id: "face", label: "FACE CARE & FACIAL", icon: "✧" },
-  { id: "spa", label: "HAIR SPA & MASSAGE", icon: "✦" },
-  { id: "grooming", label: "MANI-PEDI & WAXING", icon: "≋" },
-  { id: "threading", label: "THREADING & DETAIL", icon: "𝄜" },
-  { id: "makeup", label: "MAKEUP & GROOM", icon: "✨" }
+  { id: "hair", label: "HAIRCUT & STYLES", icon: "✂" },
+  { id: "beard", label: "BEARD & SHAVE", icon: "◈" },
+  { id: "color", label: "HAIR COLOUR", icon: "◉" },
+  { id: "face", label: "FACIAL & CLEANUP", icon: "✧" },
+  { id: "spa", label: "HAIR SPA & THERAPY", icon: "✦" },
+  { id: "mask", label: "FACE MASKS", icon: "🧖" },
+  { id: "massage", label: "MASSAGES", icon: "💆" },
+  { id: "special", label: "PIERCING, TATTOO & PEDI", icon: "✒️" }
 ];
 
 export const services = [
-  // --- Hair Styling & Cuts ---
+  // ==========================================
+  // 1. HAIRCUT & STYLES (Category: hair)
+  // ==========================================
   {
-    id: "hair-cut",
+    id: "hair-basic",
     categoryId: "hair",
     tool: "SCISSORS",
     icon: "✂",
-    title: "Precision Haircut & Fade",
-    price: "₹150",
-    duration: "30-40 mins",
-    desc: "Sharp scissor cuts & clean fades tailored to your face.",
+    title: "Basic Hairstyle",
+    price: "₹100",
+    duration: "20-25 mins",
+    desc: "Clean everyday trim and comb setting tailored for effortless daily maintenance.",
     items: [
-      "Face shape consultation & analysis",
-      "Precision scissor / clipper fade",
-      "Razor neck cleanup & sideburn detailing",
-      "Hair wash & light pomade styling"
+      "Hair sectioning & length trim",
+      "Sideburn & ear contour neatening",
+      "Neck razor cleanup",
+      "Light everyday styling finish"
     ]
   },
   {
-    id: "hair-style",
+    id: "hair-stylish",
     categoryId: "hair",
-    tool: "COMB",
-    icon: "≋",
-    title: "Creative Hair Styling & Blow Dry",
-    price: "₹180",
+    tool: "SCISSORS",
+    icon: "✂",
+    title: "Stylish Haircut",
+    price: "₹120",
     duration: "25-30 mins",
-    desc: "Fresh blow-dry & texture that stays styled all day.",
+    desc: "Contemporary trend cut, textured crop, or modern fade suited to your cranial profile.",
     items: [
-      "Thermal blow dry & volume shaping",
-      "Matte / high-sheen wax & clay setting",
-      "Frizz control & hair mist spray",
-      "Occasion / party finishing"
+      "Personalized style & fade consultation",
+      "Precision shear & clipper graduation",
+      "Razor perimeter line-up",
+      "Matte pomade volume styling"
+    ]
+  },
+  {
+    id: "hair-spl",
+    categoryId: "hair",
+    tool: "SCISSORS",
+    icon: "✂",
+    title: "Spl Haircut (Special Haircut)",
+    price: "₹150",
+    duration: "30-35 mins",
+    desc: "Signature master scissor cut with high-detail taper, custom texture, and blow dry.",
+    items: [
+      "Master Takefu 440C shear texturizing",
+      "Skin fade or bespoke taper finish",
+      "Thermal blow-dry volume lock",
+      "Finishing shine & hold spray"
     ]
   },
   {
@@ -69,241 +87,635 @@ export const services = [
     categoryId: "hair",
     tool: "CARE",
     icon: "✂",
-    title: "Kids Haircut & Styling",
+    title: "Kids Haircut",
     price: "₹120",
     duration: "20-25 mins",
-    desc: "Gentle cuts for little champs with zero fuss and big smiles.",
+    desc: "Gentle, fun, and patient haircut for little boys with zero fuss and clean edges.",
     items: [
       "Patient, kid-friendly handling",
-      "Clean scissor trim or clipper cut",
-      "Gentle neck clean & hair blow-off",
+      "Gentle clipper or scissor trim",
+      "Soft brush neck cleanup",
       "Fun styling finish"
     ]
   },
-
-  // --- Beard Grooming ---
   {
-    id: "beard-shape",
-    categoryId: "beard",
-    tool: "CLIPPER",
-    icon: "◈",
-    title: "Beard Sculpting & Line-up",
-    price: "₹100",
+    id: "hair-baby-girls",
+    categoryId: "hair",
+    tool: "CARE",
+    icon: "✂",
+    title: "Baby Cutting (Girls)",
+    price: "₹150",
     duration: "20-25 mins",
-    desc: "Crisp cheek lines and neat trimming to frame your jaw.",
+    desc: "Delicate, gentle hair trimming and shaping for baby girls with extra patience and care.",
     items: [
-      "Custom length clipper trimming",
-      "Precision razor cheek & neck line-up",
-      "Nourishing beard oil massage",
-      "Moustache wax & alignment"
+      "Gentle, careful scissor sectioning",
+      "Even bob or fringe line shaping",
+      "Soft comb through & blow-off",
+      "Clean, quick gentle touch"
     ]
   },
   {
-    id: "beard-shave",
+    id: "hair-cut-shave-basic",
+    categoryId: "hair",
+    tool: "COMBO",
+    icon: "✂",
+    title: "Basic Haircut & Shaving",
+    price: "₹170",
+    duration: "35-40 mins",
+    desc: "Complete classic combo: crisp everyday haircut paired with a clean smooth shave.",
+    items: [
+      "Basic haircut & sideburn trim",
+      "Pre-shave warm lather foam",
+      "Single-stroke clean razor shave",
+      "Cooling aftershave astringent"
+    ]
+  },
+  {
+    id: "hair-cut-shave-spl",
+    categoryId: "hair",
+    tool: "COMBO",
+    icon: "✂",
+    title: "Special Haircut & Shaving",
+    price: "₹200",
+    duration: "40-45 mins",
+    desc: "Premium master haircut with detailed skin taper and relaxing precision shave.",
+    items: [
+      "Special stylish haircut & textured fade",
+      "Warm water mist & razor perimeter",
+      "Smooth close shave with post-balm",
+      "Blow dry & styling setting"
+    ]
+  },
+
+  // ==========================================
+  // 2. BEARD & SHAVING (Category: beard)
+  // ==========================================
+  {
+    id: "beard-shaving",
     categoryId: "beard",
     tool: "RAZOR",
     icon: "◈",
-    title: "Classic Hot Towel Shave",
-    price: "₹120",
-    duration: "25-30 mins",
-    desc: "Warm steam, rich foam, and baby-smooth skin.",
+    title: "Shaving",
+    price: "₹60",
+    duration: "15-20 mins",
+    desc: "Classic clean shave with rich warm foam for baby-smooth facial skin.",
     items: [
-      "Pre-shave eucalyptus essential oil",
-      "Hot steam towel skin softening",
-      "Rich lather single-stroke razor shave",
-      "Cold towel pore close & aftershave balm"
-    ]
-  },
-
-  // --- Hair Color ---
-  {
-    id: "hair-color",
-    categoryId: "color",
-    tool: "COLOR",
-    icon: "◉",
-    title: "Global Hair Colour & Gray Coverage",
-    price: "₹350",
-    duration: "40-50 mins",
-    desc: "Ammonia-free natural color with a rich, youthful shine.",
-    items: [
-      "Shade matching & skin patch check",
-      "Root-to-tip ammonia-free application",
-      "Deep color lock wash & conditioning",
-      "Blow dry & finishing shine"
+      "Warm foam lather application",
+      "Smooth single-stroke safety razor shave",
+      "Cold splash pore tightening",
+      "Soothing aftershave lotion"
     ]
   },
   {
-    id: "beard-color",
-    categoryId: "color",
-    tool: "COLOR",
-    icon: "◉",
-    title: "Beard & Moustache Color",
-    price: "₹200",
+    id: "beard-trimming",
+    categoryId: "beard",
+    tool: "CLIPPER",
+    icon: "◈",
+    title: "Trimming",
+    price: "₹60",
+    duration: "15-20 mins",
+    desc: "Fast, neat clipper beard trim to maintain your natural beard shape and length.",
+    items: [
+      "Even clipper length guard trim",
+      "Moustache neaten & comb through",
+      "Cheek & neck boundary clean",
+      "Light beard serum touch"
+    ]
+  },
+  {
+    id: "beard-spl-shaving",
+    categoryId: "beard",
+    tool: "RAZOR",
+    icon: "◈",
+    title: "Spl Shaving (Special Shaving)",
+    price: "₹80",
     duration: "20-25 mins",
-    desc: "Quick natural blend to keep your beard looking fresh.",
+    desc: "Deluxe razor shave with hot steam towel prep and sharp edge sculpting.",
     items: [
-      "Fast-acting natural black/brown dye",
-      "Skin barrier protection along cheek lines",
-      "Gentle beard shampoo wash",
-      "Beard serum finish"
+      "Warm steam towel facial softening",
+      "Pre-shave hydrating oil & foam",
+      "Precision zero-irritation razor shave",
+      "Cooling alum & soothing balm"
     ]
   },
 
-  // --- Hair Care & Treatments ---
+  // ==========================================
+  // 3. HAIR COLOUR (Category: color)
+  // ==========================================
   {
-    id: "hair-spa",
+    id: "color-black-henna",
+    categoryId: "color",
+    tool: "COLOR",
+    icon: "◉",
+    title: "Black Henna Colour",
+    price: "₹100",
+    duration: "25-30 mins",
+    desc: "Natural black henna herbal color application for deep, organic grey coverage.",
+    items: [
+      "Pure black henna paste application",
+      "Root-to-tip grey coverage",
+      "Even comb distribution",
+      "Quick wash & towel dry"
+    ]
+  },
+  {
+    id: "color-gel-black",
+    categoryId: "color",
+    tool: "COLOR",
+    icon: "◉",
+    title: "Gel Colour Black",
+    price: "₹150",
+    duration: "25-30 mins",
+    desc: "Fast-acting ammonia-free black gel formula providing vibrant, natural black tone.",
+    items: [
+      "Even gel application across greys",
+      "Fast absorption without scalp staining",
+      "Conditioning rinse",
+      "Natural shine blow dry"
+    ]
+  },
+  {
+    id: "color-garnier",
+    categoryId: "color",
+    tool: "COLOR",
+    icon: "◉",
+    title: "Garnier Black & Burgundy",
+    price: "₹150",
+    duration: "30-35 mins",
+    desc: "Enriched fruit-oil Garnier color in rich natural black or stylish burgundy tint.",
+    items: [
+      "Shade choice: Deep Black or Rich Burgundy",
+      "Enriched almond & olive oil formula",
+      "Color-lock wash",
+      "Soft texture finish"
+    ]
+  },
+  {
+    id: "color-loreal-black",
+    categoryId: "color",
+    tool: "COLOR",
+    icon: "◉",
+    title: "L'Oréal Black Colour",
+    price: "₹350",
+    duration: "35-40 mins",
+    desc: "Salon-grade L'Oréal Paris professional black dye with intense conditioning.",
+    items: [
+      "L'Oréal Paris professional formulation",
+      "Pro-keratin scalp protection",
+      "100% resistant grey coverage",
+      "Silky glossy post-treatment wash"
+    ]
+  },
+  {
+    id: "color-revlon-black",
+    categoryId: "color",
+    tool: "COLOR",
+    icon: "◉",
+    title: "Revlon Black Colour",
+    price: "₹350",
+    duration: "35-40 mins",
+    desc: "Premium Revlon Colorsilk ammonia-free black color for radiant dimensional shine.",
+    items: [
+      "Revlon 3D Color Gel technology",
+      "Ammonia-free gentle formula",
+      "Keratin nourishment rinse",
+      "Long-lasting color retention finish"
+    ]
+  },
+  {
+    id: "color-herbal-henna",
+    categoryId: "color",
+    tool: "COLOR",
+    icon: "◉",
+    title: "Herbal Henna",
+    price: "₹200",
+    duration: "35-40 mins",
+    desc: "100% natural organic herbal henna conditioning pack for cooling scalp & rich tone.",
+    items: [
+      "Organic herbal henna leaf blend",
+      "Cooling scalp therapy",
+      "Natural conditioning and volume",
+      "Gentle clean herbal wash"
+    ]
+  },
+  {
+    id: "color-highlights-cap",
+    categoryId: "color",
+    tool: "COLOR",
+    icon: "◉",
+    title: "Highlights Colour with Cap",
+    price: "₹300",
+    duration: "40-50 mins",
+    desc: "Precision cap-pulled multi-strand highlights for trendy dimensional streaks.",
+    items: [
+      "Perforated highlight cap placement",
+      "Strand selection & lightener/color apply",
+      "Calibrated processing time",
+      "Toning wash & blow dry style"
+    ]
+  },
+  {
+    id: "color-highlights-only",
+    categoryId: "color",
+    tool: "COLOR",
+    icon: "◉",
+    title: "Only Highlights Colour",
+    price: "₹150",
+    duration: "25-30 mins",
+    desc: "Targeted streak or crown highlight coloring to accent your haircut.",
+    items: [
+      "Fringe or crown streak isolation",
+      "Vibrant tone application",
+      "Quick processing & wash",
+      "Accent styling finish"
+    ]
+  },
+
+  // ==========================================
+  // 4. FACIAL & FACE CLEANUP (Category: face)
+  // ==========================================
+  {
+    id: "face-normal-cleanup",
+    categoryId: "face",
+    tool: "BEAUTY",
+    icon: "✧",
+    title: "Normal Face Cleanup",
+    price: "₹100",
+    duration: "20 mins",
+    desc: "Quick face wash, gentle exfoliation, and toner to remove daily dirt and oil.",
+    items: [
+      "Deep foaming face cleanser",
+      "Mild scrub blackhead removal",
+      "Rose water skin toning",
+      "Fresh oil-free moisturizer"
+    ]
+  },
+  {
+    id: "face-scrub-facial",
+    categoryId: "face",
+    tool: "BEAUTY",
+    icon: "✧",
+    title: "Scrub Facial",
+    price: "₹200",
+    duration: "25-30 mins",
+    desc: "Intensive exfoliating scrub to remove dead skin cells and reveal fresher, brighter skin.",
+    items: [
+      "Deep pore scrub exfoliation",
+      "Gentle nose & chin dead cell clean",
+      "Toner splash",
+      "Hydrating gel finish"
+    ]
+  },
+  {
+    id: "face-scrub-steam",
+    categoryId: "face",
+    tool: "BEAUTY",
+    icon: "✧",
+    title: "Scrub with Steam",
+    price: "₹250",
+    duration: "30 mins",
+    desc: "Warm steam pore opening combined with deep scrub for thorough detox and blackhead release.",
+    items: [
+      "Warm facial ozone steam mist",
+      "Deep pore exfoliating scrub",
+      "Blackhead & whitehead clearance",
+      "Pore-tightening cold compress"
+    ]
+  },
+  {
+    id: "face-dtan",
+    categoryId: "face",
+    tool: "BEAUTY",
+    icon: "✧",
+    title: "D-Tan Treatment",
+    price: "₹350",
+    duration: "30-35 mins",
+    desc: "Insta-active kojic & milk protein de-tan pack to erase stubborn sun tan and restore tone.",
+    items: [
+      "Face & neck cleansing",
+      "Kojic acid active de-tan pack application",
+      "Pigmentation & sun spot lightening",
+      "Cooling aloe vera soothing finish"
+    ]
+  },
+  {
+    id: "face-bleach",
+    categoryId: "face",
+    tool: "BEAUTY",
+    icon: "✧",
+    title: "Face Bleach",
+    price: "₹350",
+    duration: "25-30 mins",
+    desc: "Gentle skin bleach to lighten facial hair, even out skin tone, and boost instant brightness.",
+    items: [
+      "Pre-bleach skin sensitivity check",
+      "Golden glow bleach cream application",
+      "Facial hair color balancing",
+      "Post-bleach cooling face gel"
+    ]
+  },
+  {
+    id: "face-basic-facial",
+    categoryId: "face",
+    tool: "BEAUTY",
+    icon: "✧",
+    title: "Basic Facial",
+    price: "₹500",
+    duration: "35-40 mins",
+    desc: "Complete essential facial with cleansing, massage, steam, and soothing pack.",
+    items: [
+      "Cleansing milk purification",
+      "Facial scrub & gentle extraction",
+      "10-minute relaxing facial massage",
+      "Hydrating clay face mask"
+    ]
+  },
+  {
+    id: "face-fruit-facial",
+    categoryId: "face",
+    tool: "BEAUTY",
+    icon: "✧",
+    title: "Fruit Facial",
+    price: "₹1,000",
+    duration: "45-50 mins",
+    desc: "Natural mixed fruit extracts (papaya, orange, apple) packed with vitamins for radiant skin.",
+    items: [
+      "Fruit cleansing cream",
+      "Natural fruit enzyme scrub",
+      "20-minute relaxing facial massage",
+      "Nourishing fruit pulp face pack"
+    ]
+  },
+  {
+    id: "face-diamond-facial",
+    categoryId: "face",
+    tool: "BEAUTY",
+    icon: "✧",
+    title: "Diamond Facial",
+    price: "₹1,000",
+    duration: "50-60 mins",
+    desc: "Diamond ash micro-dermabrasion facial for supreme skin polishing, anti-aging, and glow.",
+    items: [
+      "Diamond purifying cleanser",
+      "Diamond ash exfoliating scrub",
+      "Lifting massage cream with serum",
+      "Diamond peel-off brightening mask"
+    ]
+  },
+  {
+    id: "face-gold-facial",
+    categoryId: "face",
+    tool: "BEAUTY",
+    icon: "✧",
+    title: "Gold Facial",
+    price: "₹1,500",
+    duration: "60 mins",
+    desc: "The ultimate luxury 24K gold radiance facial for weddings, celebrations, and grand glow.",
+    items: [
+      "24K gold leaf cleansing gel",
+      "Gold micro-foliating scrub",
+      "Acupressure face & neck gold massage",
+      "Radiant 24K gold peel-off mask"
+    ]
+  },
+
+  // ==========================================
+  // 5. HAIR SPA & THERAPY (Category: spa)
+  // ==========================================
+  {
+    id: "spa-classic",
     categoryId: "spa",
     tool: "CARE",
     icon: "✦",
-    title: "Deep Nourishing Hair Spa & Steam",
-    price: "₹450",
-    duration: "40-50 mins",
-    desc: "Creamy deep conditioning & warm steam for silky hair.",
+    title: "Classic Hair Spa",
+    price: "₹500",
+    duration: "40-45 mins",
+    desc: "Deep nourishing cream spa with ozone steam and relaxing scalp massage for soft, shiny hair.",
     items: [
-      "Deep scalp clarifying wash",
-      "Keratin & argan rich spa cream infusion",
-      "Ozone warm steam circulation",
+      "Scalp clarifying shampoo wash",
+      "Intense keratin spa cream coating",
+      "Warm ozone steam circulation",
       "15-minute relaxing head massage"
     ]
   },
   {
-    id: "hair-treatment",
+    id: "spa-anti-dandruff",
     categoryId: "spa",
     tool: "CARE",
     icon: "✦",
-    title: "Anti-Dandruff & Scalp Detox",
-    price: "₹500",
-    duration: "40-45 mins",
-    desc: "Cooling tea-tree therapy to say goodbye to flakes and itch.",
+    title: "Anti-Dandruff Hair Spa",
+    price: "₹750",
+    duration: "45-50 mins",
+    desc: "Specialized therapeutic tea-tree & zinc spa to eradicate stubborn flakes and soothe itching.",
     items: [
       "Tea-tree exfoliating scalp scrub",
-      "Anti-bacterial micro-steam therapy",
-      "Deep cleansing zinc scalp wash",
-      "Cooling tonic root strengthener"
-    ]
-  },
-
-  // --- Face Care & Facials ---
-  {
-    id: "face-detan",
-    categoryId: "face",
-    tool: "BEAUTY",
-    icon: "✧",
-    title: "Insta De-Tan & Face Cleanup",
-    price: "₹350",
-    duration: "30-40 mins",
-    desc: "Wipe off sun tan and city pollution for an instant glow.",
-    items: [
-      "Gentle facial foaming cleanse",
-      "Kojic acid & milk protein de-tan pack",
-      "Blackhead & whitehead extraction",
-      "Pore tightening rose water mist"
+      "Anti-fungal zinc pyrithione spa cream",
+      "Warm steam follicle opening",
+      "Cooling anti-dandruff tonic leave-in"
     ]
   },
   {
-    id: "face-facial",
-    categoryId: "face",
-    tool: "BEAUTY",
-    icon: "✧",
-    title: "Gold & Diamond Radiance Facial",
-    price: "₹700",
-    duration: "50-60 mins",
-    desc: "Deep cleanse & golden glow to refresh tired skin.",
-    items: [
-      "Deep pore scrub & micro-exfoliation",
-      "Steam & gentle comedone extraction",
-      "15-min lymphatic face & neck massage",
-      "Radiance gold peel-off mask & SPF finish"
-    ]
-  },
-
-  // --- Massage Services ---
-  {
-    id: "head-massage",
+    id: "spa-dandruff-treatment",
     categoryId: "spa",
     tool: "CARE",
     icon: "✦",
-    title: "Stress-Relief Head & Shoulder Massage",
-    price: "₹250",
-    duration: "25-30 mins",
-    desc: "Warm herbal oil massage to melt away all your stress.",
+    title: "Only Dandruff Treatment",
+    price: "₹500",
+    duration: "30-35 mins",
+    desc: "Focused scalp detox treatment targeting active dandruff, root flaking, and irritation.",
     items: [
-      "Choice of warm almond, brahmi or cooling mint oil",
-      "Deep scalp acupressure stimulation",
-      "Upper back, neck & shoulder knot release",
-      "Refreshing dry towel wipe"
+      "Medicated anti-dandruff scalp wash",
+      "Scalp scrub & pore clarifying",
+      "Anti-itch cooling pack",
+      "Root strengthener application"
+    ]
+  },
+  {
+    id: "spa-straightening",
+    categoryId: "spa",
+    tool: "CARE",
+    icon: "✦",
+    title: "Hair Straightening",
+    price: "₹1,000 - ₹2,000",
+    duration: "90-120 mins",
+    desc: "Professional chemical relaxing & ceramic flat-iron smoothing for pin-straight, frizz-free hair.",
+    items: [
+      "Hair strand elasticity analysis",
+      "Smoothing cream & keratin bonding",
+      "Ceramic thermal press alignment",
+      "Neutralizing sealant & shine serum"
     ]
   },
 
-  // --- Manicure & Pedicure Services ---
+  // ==========================================
+  // 6. FACE MASKS (Category: mask)
+  // ==========================================
   {
-    id: "mani-pedi",
-    categoryId: "grooming",
+    id: "mask-charcoal",
+    categoryId: "mask",
+    tool: "BEAUTY",
+    icon: "🧖",
+    title: "Charcoal Face Mask",
+    price: "₹350",
+    duration: "25 mins",
+    desc: "Activated bamboo charcoal peel-off mask that draws out deep toxins, grease, and blackheads.",
+    items: [
+      "Deep foam face wash",
+      "Activated charcoal paste application",
+      "Peel-off pore clearance",
+      "Cold rose water tightening"
+    ]
+  },
+  {
+    id: "mask-orange",
+    categoryId: "mask",
+    tool: "BEAUTY",
+    icon: "🧖",
+    title: "Orange Face Mask",
+    price: "₹350",
+    duration: "25 mins",
+    desc: "Vitamin C rich orange peel mask to fight dullness, reduce excess oil, and invigorate tired skin.",
+    items: [
+      "Gentle face clean",
+      "Natural orange zest vitamin C mask",
+      "Antioxidant skin brightening",
+      "Fresh citrus glow gel"
+    ]
+  },
+  {
+    id: "mask-neck-face-clean",
+    categoryId: "mask",
+    tool: "BEAUTY",
+    icon: "🧖",
+    title: "Neck & Face Cleaning",
+    price: "₹500",
+    duration: "35 mins",
+    desc: "Thorough dual scrub, steam, and detox wrap for both face and back-of-neck collar areas.",
+    items: [
+      "Back of neck dark patch scrub",
+      "Warm steam wrap & dead skin removal",
+      "Full face clarifying cleanse",
+      "Even tone moisturizing finish"
+    ]
+  },
+
+  // ==========================================
+  // 7. MASSAGES (Category: massage)
+  // ==========================================
+  {
+    id: "massage-hand",
+    categoryId: "massage",
+    tool: "CARE",
+    icon: "💆",
+    title: "Hand Massage",
+    price: "₹400",
+    duration: "25-30 mins",
+    desc: "Relieving palm, forearm, and finger acupressure massage to release repetitive strain.",
+    items: [
+      "Warm herbal almond oil application",
+      "Forearm muscle knot kneading",
+      "Palm & finger reflexology pressure",
+      "Hot towel dry compress"
+    ]
+  },
+  {
+    id: "massage-leg",
+    categoryId: "massage",
+    tool: "CARE",
+    icon: "💆",
+    title: "Leg Massage 🦵🏼",
+    price: "₹500",
+    duration: "30-35 mins",
+    desc: "Deep calf and foot relief massage with essential oils to eliminate walking fatigue.",
+    items: [
+      "Warm herbal oil infusion",
+      "Calf muscle decompression strokes",
+      "Foot arch reflexology points",
+      "Tension release towel wrap"
+    ]
+  },
+  {
+    id: "massage-full-body",
+    categoryId: "massage",
+    tool: "CARE",
+    icon: "💆",
+    title: "Full Body Massage (1 Hour)",
+    price: "₹1,500 - ₹2,000",
+    duration: "60 mins",
+    desc: "Complete head-to-toe restorative massage by skilled therapists for total mind and body renewal.",
+    items: [
+      "Choice of warm Ayurvedic herbal oils",
+      "Deep tissue knot and back tension release",
+      "Shoulder, neck, spine & leg acupressure",
+      "Hot steam towel relaxation finish"
+    ]
+  },
+
+  // ==========================================
+  // 8. PIERCING, TATTOO & PEDI (Category: special)
+  // ==========================================
+  {
+    id: "special-gunshot",
+    categoryId: "special",
+    tool: "CARE",
+    icon: "◈",
+    title: "Gunshot Piercing (Ear / Nose)",
+    price: "₹150",
+    duration: "10 mins",
+    desc: "Quick, sterile, hygienic spring-loaded ear or nose piercing with surgical-grade studs.",
+    items: [
+      "Sterile skin sanitization & point marking",
+      "Spring-loaded painless gunshot pierce",
+      "Hypoallergenic surgical stud placement",
+      "Antiseptic aftercare guidance"
+    ]
+  },
+  {
+    id: "special-pedicure-only",
+    categoryId: "special",
     tool: "CARE",
     icon: "≋",
-    title: "Gentlemen's Deluxe Pedicure & Manicure",
-    price: "₹450",
-    duration: "40-50 mins",
-    desc: "Warm soak, neat nails, and happily pampered hands and feet.",
+    title: "Only Pedicure",
+    price: "₹500",
+    duration: "35-40 mins",
+    desc: "Warm herbal foot soak, heel callus scrubbing, nail clip, buff, and soothing foot massage.",
     items: [
-      "Warm antiseptic foot soak with sea salts",
-      "Heel scrubbing & callus smoothing",
-      "Cuticle push, nail clip & buffing",
-      "Cooling foot & calf massage"
+      "Antiseptic warm sea salt foot bath",
+      "Pumice stone heel scrub & dead skin removal",
+      "Nail trim, filing & cuticle care",
+      "Relaxing foot & ankle massage"
     ]
   },
-
-  // --- Waxing Services ---
   {
-    id: "waxing",
-    categoryId: "grooming",
-    tool: "BEAUTY",
-    icon: "✧",
-    title: "Men's Body Waxing (Arms / Chest / Back)",
-    price: "From ₹300",
-    duration: "30-45 mins",
-    desc: "Quick, painless wax for breezy and smooth skin.",
-    items: [
-      "Skin prep & soothing powder application",
-      "Low-temperature pain-minimizing strip wax",
-      "Soothing aloe vera anti-irritation gel",
-      "Clean, smooth finish"
-    ]
-  },
-
-  // --- Threading Services ---
-  {
-    id: "threading",
-    categoryId: "threading",
+    id: "special-pedi-mani",
+    categoryId: "special",
     tool: "CARE",
-    icon: "𝄜",
-    title: "Eyebrow & Forehead Threading Detailing",
-    price: "₹50",
-    duration: "10-15 mins",
-    desc: "Neat brow arches and clean forehead detailing in minutes.",
+    icon: "≋",
+    title: "Pedicure & Manicure",
+    price: "₹800",
+    duration: "55-65 mins",
+    desc: "Complete dual care package for hands and feet with warm soaks, scrubs, and nail detailing.",
     items: [
-      "Precision organic cotton thread work",
-      "Natural masculine arch maintenance (no over-thinning)",
-      "Forehead & temple stray hair cleanup",
-      "Cooling mint astringent lotion"
+      "Warm herbal foot bath & hand soak",
+      "Heel scrubbing & cuticle maintenance",
+      "Nail shaping, clipping & buffing shine",
+      "Dual hand and foot reflexology massage"
     ]
   },
-
-  // --- Makeup Services ---
   {
-    id: "groom-makeup",
-    categoryId: "makeup",
-    tool: "BEAUTY",
-    icon: "✨",
-    title: "Groom & Party Event Makeover",
-    price: "₹999",
-    duration: "45-60 mins",
-    desc: "Camera-ready matte look for your big spotlight day.",
+    id: "special-tattoos",
+    categoryId: "special",
+    tool: "CARE",
+    icon: "✒️",
+    title: "All Tattoos Available (Custom Ink)",
+    price: "Available on Consultation",
+    duration: "Custom",
+    desc: "Custom permanent and artistic tattoo work with 100% sterile single-use needles.",
     items: [
-      "Skin priming & shine-free base balancing",
-      "Dark circle & blemish micro-concealing",
-      "Beard & brow definition alignment",
-      "Ultra-matte sweat-resistant setting spray"
+      "100% sterile single-use needles & inks",
+      "Custom sketch & size placement",
+      "Precision tattoo machine linework & shading",
+      "Medical-grade antiseptic healing wrap"
     ]
   }
 ];
@@ -311,83 +723,83 @@ export const services = [
 export const comboOffers = [
   {
     id: "pkg-executive",
-    title: "Executive Cut & Beard Grooming",
-    price: "₹349",
-    originalPrice: "₹490",
-    savings: "Save ₹141",
+    title: "Special Cut & Shave Grooming",
+    price: "₹200",
+    originalPrice: "₹230",
+    savings: "Save ₹30",
     tag: "MOST POPULAR",
     image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=85",
-    idealFor: "Fresh cut & clean beard for everyday confidence",
+    idealFor: "Fresh special cut & clean shaving for everyday confidence",
     features: [
-      "Signature Haircut & Scissor Fade",
-      "Beard Shaping & Sharp Razor Line-up",
-      "Refreshing Hair Wash & Conditioning",
-      "Quick 10-Min Stress Relief Head Massage"
+      "Special Haircut & Fade Detailing",
+      "Smooth Precision Shave with Warm Foam",
+      "Refreshing Hair Wash & Comb Styling",
+      "Quick Head Massage Touch"
     ]
   },
   {
     id: "pkg-detan",
-    title: "Royal De-Tan & Skin Refresh",
-    price: "₹699",
-    originalPrice: "₹1,050",
-    savings: "Save ₹351",
+    title: "Royal De-Tan & Hair Spa Combo",
+    price: "₹799",
+    originalPrice: "₹1,000",
+    savings: "Save ₹201",
     tag: "BEST VALUE",
     image: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=800&q=85",
-    idealFor: "Banish sun tan and city dust for a quick handsome glow",
+    idealFor: "Banish sun tan and revitalize dry hair with deep steam",
     features: [
-      "Precision Haircut & Custom Styling",
-      "Beard Trim or Classic Hot Towel Shave",
-      "Insta-Glow Face De-Tan & Blackhead Removal",
-      "Cooling Mint Scalp Acupressure"
+      "Stylish Haircut & Beard Trim",
+      "Active D-Tan Sun Removal Face Pack",
+      "Classic Hair Spa with Warm Ozone Steam",
+      "Cooling Scalp Acupressure Finish"
     ]
   },
   {
     id: "pkg-spa",
-    title: "Deep Hair Spa & Scalp Relaxation",
-    price: "₹799",
-    originalPrice: "₹1,200",
-    savings: "Save ₹401",
+    title: "Deep Hair Spa & Anti-Dandruff Detox",
+    price: "₹999",
+    originalPrice: "₹1,250",
+    savings: "Save ₹251",
     tag: "THERAPEUTIC",
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=85",
-    idealFor: "Melt away headache & stress with nourishing warm steam",
+    idealFor: "Melt away headache & stress with nourishing warm steam and flake control",
     features: [
-      "Keratin Nourishing Hair Spa Infusion",
-      "Ozone Warm Steam Therapy",
+      "Anti-Dandruff Hair Spa & Scalp Scrub",
+      "Ozone Warm Steam Circulation",
       "20-Min Deep Head & Shoulder Massage",
       "Hair Wash & Professional Blow Dry Setting"
     ]
   },
   {
     id: "pkg-head-to-toe",
-    title: "Gentlemen's Complete Care",
+    title: "Deluxe Mani-Pedi & Scrub Refresh",
     price: "₹1,199",
-    originalPrice: "₹1,750",
-    savings: "Save ₹551",
+    originalPrice: "₹1,400",
+    savings: "Save ₹201",
     tag: "HEAD TO TOE",
     image: "https://images.unsplash.com/photo-1519014816548-bf7851504fdd?auto=format&fit=crop&w=800&q=85",
     idealFor: "Pampered feet, neat hands, and fresh skin from head to toe",
     features: [
-      "Deluxe Antiseptic Pedicure Foot Soak & Scrub",
-      "Gentlemen's Hand Grooming Manicure",
-      "Insta De-Tan Face Cleanup",
-      "Eyebrow & Forehead Threading Detailing"
+      "Pedicure & Manicure Complete Care",
+      "Scrub with Steam Facial Clean",
+      "Neck & Face Detailing",
+      "Warm Herbal Towel Compression"
     ]
   },
   {
     id: "pkg-groom",
-    title: "Grand Groom & Event Transformation",
+    title: "Grand Gold Facial & Groom Transformation",
     price: "₹1,999",
-    originalPrice: "₹3,100",
-    savings: "Save ₹1,101",
+    originalPrice: "₹2,500",
+    savings: "Save ₹501",
     tag: "LUXURY WEDDING",
     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=85",
-    idealFor: "The ultimate full-body glow for weddings & life's big moments",
+    idealFor: "The ultimate 24K gold glow for weddings & life's big celebrations",
     features: [
-      "Master Haircut & Event Blow Dry Styling",
-      "Beard Sculpting with Hot Steam Towel Shave",
-      "Gold Radiance Deep Cleansing Facial",
-      "Deep Nourishing Hair Spa & Steam",
-      "Gentlemen's Manicure & Pedicure Grooming"
+      "Spl Haircut & Styling Blow Dry",
+      "Spl Shave with Hot Steam Towel",
+      "24K Gold Radiance Facial & Pack",
+      "Classic Hair Spa with Steam Therapy",
+      "Hand & Shoulder Stress Release Massage"
     ]
   }
 ];
@@ -396,7 +808,7 @@ export const gallery = [
   {
     src: salonHeroInterior,
     tag: "THE SHOP",
-    caption: "Signature salon wall art & grooming lounge at Mithilapuri Colony, Madhurawada",
+    caption: "Signature salon lounge at SBI Colony, Police Station Road, Madhurawada, Bakkanapalem",
     big: true
   },
   {
@@ -428,19 +840,19 @@ export const gallery = [
 
 export const testimonials = [
   {
-    text: "Best salon experience in Madhurawada! Great atmosphere, extremely clean near Raja Rajeswari temple, and the barber understood exactly the skin fade style I showed.",
+    text: "Best salon experience in Madhurawada! Great atmosphere, extremely clean beside APGV Bank, and the barber understood exactly the stylish haircut and beard trim I wanted.",
     author: "Kiran Varma",
     badge: "Verified Client",
     stars: 5
   },
   {
-    text: "Very professional staff and comfortable chairs. Their beard shaping and hot steam cleanup is top-notch. Highly recommended in Vizag.",
+    text: "Very professional staff and comfortable chairs. Their special haircut, shaving, and hair spa are top-notch. Highly recommended in Bakkanapalem, Vizag.",
     author: "Rohit Reddy",
     badge: "Regular Client",
     stars: 5
   },
   {
-    text: "Patience and real attention to detail. Even for kids and seniors they handle with utmost care. Booking on WhatsApp was super easy.",
+    text: "Patience and real attention to detail. Even for kids haircuts and baby cutting they handle with utmost care. Booking on WhatsApp was super easy.",
     author: "Srinivas Rao",
     badge: "Happy Customer",
     stars: 5

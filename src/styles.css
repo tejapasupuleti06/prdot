@@ -5852,3 +5852,766 @@ a {
   }
 }
 
+
+/* ==========================================================================
+   🃏 SKIPER49 - 3D INVERTED COVERFLOW PERSPECTIVE CAROUSEL (@skiper-ui/skiper49)
+   ========================================================================== */
+.skiper49-stage {
+  position: relative;
+  width: 100%;
+  margin: 15px auto 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1200px;
+}
+
+.skiper49-cards-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.skiper49-swiper {
+  width: 100% !important;
+  max-width: 460px !important;
+  height: clamp(510px, 64vh, 575px) !important;
+  overflow: visible !important;
+  padding: 16px 0 42px !important;
+}
+
+.skiper49-card-slide {
+  width: min(320px, 82vw) !important;
+  border-radius: 20px !important;
+  background: transparent !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+  height: 100% !important;
+  transition: transform 0.35s ease, filter 0.35s ease !important;
+}
+
+.skiper49-card-slide:not(.swiper-slide-active) {
+  opacity: 0.72;
+  filter: brightness(0.7) blur(0.5px);
+}
+
+.skiper49-card-slide.swiper-slide-active {
+  opacity: 1;
+  filter: none;
+}
+
+.coverflow-slide-swiper .swiper-pagination {
+  bottom: 8px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.coverflow-slide-swiper .swiper-pagination-bullet {
+  background: rgba(212, 167, 94, 0.35) !important;
+  width: 8px !important;
+  height: 8px !important;
+  opacity: 0.6 !important;
+  border-radius: 4px !important;
+  transition: all 0.25s ease !important;
+}
+
+.coverflow-slide-swiper .swiper-pagination-bullet-active {
+  background: #d4a75e !important;
+  width: 24px !important;
+  opacity: 1 !important;
+  box-shadow: 0 0 12px rgba(212, 167, 94, 0.75) !important;
+}
+
+@media (max-width: 640px) {
+  .skiper49-cards-wrap {
+    gap: 6px;
+    padding: 0 2px;
+  }
+  .skiper49-swiper {
+    width: 100% !important;
+    height: clamp(495px, 63vh, 545px) !important;
+    padding: 10px 0 36px !important;
+  }
+  .skiper49-card-slide {
+    width: min(300px, 80vw) !important;
+  }
+}
+
+/* ==========================================================================
+   🪧 HERO HANGING SIGNBOARD: "TATTOOS AVAILABLE"
+   ========================================================================== */
+.hero-tagline-signboard-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.hero-tagline-signboard-row .hero-copy {
+  margin-bottom: 0 !important;
+}
+
+.hero-title-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 28px;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.hero-hanging-signboard {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transform-origin: top center;
+  animation: signboardSwing 4.5s ease-in-out infinite;
+  margin-top: 8px;
+  flex-shrink: 0;
+  transition: filter 0.25s ease, transform 0.25s ease;
+  z-index: 10;
+}
+
+.hero-hanging-signboard:hover {
+  filter: brightness(1.15);
+  animation-play-state: paused;
+  transform: rotate(0deg) scale(1.04);
+}
+
+@keyframes signboardSwing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2.8deg);
+  }
+  75% {
+    transform: rotate(-2.2deg);
+  }
+}
+
+.signboard-chain-mount {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+  height: 22px;
+  position: relative;
+}
+
+.signboard-mount-ring {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #d4a75e;
+  background: #11100e;
+  box-shadow: 0 0 6px rgba(212, 167, 94, 0.6);
+  position: absolute;
+  top: 0;
+}
+
+.ring-left {
+  left: 20px;
+}
+
+.ring-right {
+  right: 20px;
+}
+
+.signboard-chain {
+  width: 2px;
+  height: 20px;
+  background: repeating-linear-gradient(
+    180deg,
+    #fae7c9 0px,
+    #d4a75e 3px,
+    #5a4623 4px,
+    #11100e 5px
+  );
+  position: absolute;
+  top: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+.chain-left {
+  left: 23px;
+}
+
+.chain-right {
+  right: 23px;
+}
+
+.signboard-board {
+  position: relative;
+  background: linear-gradient(145deg, #1f1b16 0%, #12100d 100%);
+  border: 1.5px solid #d4a75e;
+  border-radius: 8px;
+  padding: 10px 16px;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(212, 167, 94, 0.22),
+    inset 0 0 10px rgba(0, 0, 0, 0.8);
+  min-width: 190px;
+  max-width: 230px;
+  text-align: center;
+}
+
+.signboard-rivet {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #d4a75e;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+.rivet-tl { top: 4px; left: 4px; }
+.rivet-tr { top: 4px; right: 4px; }
+.rivet-bl { bottom: 4px; left: 4px; }
+.rivet-br { bottom: 4px; right: 4px; }
+
+.signboard-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.signboard-kicker {
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: #fae7c9;
+  text-transform: uppercase;
+}
+
+.signboard-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #f7e4c3;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-shadow: 0 0 10px rgba(212, 167, 94, 0.5);
+  margin: 1px 0;
+}
+
+.signboard-sub {
+  font-size: 7.5px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: #d4a75e;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .hero-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .hero-hanging-signboard {
+    margin-top: -6px;
+    margin-bottom: 8px;
+    align-self: flex-start;
+  }
+}
+
+/* ==========================================================================
+   ✒️ TATTOO SHOWCASE STRIP (Down below Signature Packages in CraftHub)
+   ========================================================================== */
+.hub-tattoo-strip {
+  margin-top: 32px;
+  background: linear-gradient(135deg, rgba(34, 29, 24, 0.95) 0%, rgba(18, 16, 13, 0.98) 100%);
+  border: 1.5px solid rgba(212, 167, 94, 0.45);
+  border-radius: 16px;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), 0 0 25px rgba(212, 167, 94, 0.12);
+}
+
+.hub-tattoo-strip:hover {
+  border-color: #d4a75e;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 35px rgba(212, 167, 94, 0.3);
+}
+
+.hub-tattoo-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.hub-tattoo-badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #11100e;
+  background: linear-gradient(135deg, #f7e4c3 0%, #d4a75e 100%);
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.hub-tattoo-left h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: #fff6e5;
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.hub-tattoo-left p {
+  font-size: 12.5px;
+  color: #a8a296;
+  margin: 0;
+}
+
+.hub-tattoo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 167, 94, 0.14);
+  border: 1.5px solid #d4a75e;
+  color: #fae7c9;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.22s ease;
+}
+
+.hub-tattoo-strip:hover .hub-tattoo-btn {
+  background: #d4a75e;
+  color: #11100e;
+  box-shadow: 0 0 20px rgba(212, 167, 94, 0.5);
+}
+
+@media (max-width: 768px) {
+  .hub-tattoo-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 20px;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .hub-tattoo-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .hub-tattoo-left h4 {
+    font-size: 18px;
+  }
+  .hub-tattoo-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   🖋️ FULL DEDICATED TATTOO SECTION
+   ========================================================================== */
+.tattoo-section {
+  padding: 90px 0 80px;
+  position: relative;
+  background: radial-gradient(circle at 50% 10%, rgba(212, 167, 94, 0.08) 0%, transparent 60%), #11100e;
+  border-top: 1px solid rgba(212, 167, 94, 0.18);
+  border-bottom: 1px solid rgba(212, 167, 94, 0.18);
+}
+
+.tattoo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.tattoo-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tattoo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  font-weight: 800;
+  color: #fae7c9;
+  background: rgba(212, 167, 94, 0.15);
+  border: 1px solid #d4a75e;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.tattoo-sterile-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.tattoo-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: flex-end;
+  margin-bottom: 45px;
+}
+
+.tattoo-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(34px, 4.5vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #ffffff;
+  margin: 0;
+}
+
+.tattoo-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #a8a296;
+  margin: 0;
+}
+
+.tattoo-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.tattoo-feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 167, 94, 0.25);
+  border-radius: 12px;
+  padding: 20px 18px;
+  transition: all 0.25s ease;
+}
+
+.tattoo-feature-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: #d4a75e;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+.tattoo-feat-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.tattoo-feat-head h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fae7c9;
+  margin: 0;
+}
+
+.tattoo-feature-card p {
+  font-size: 12px;
+  line-height: 1.55;
+  color: #9c9588;
+  margin: 0;
+}
+
+.tattoo-styles-box {
+  background: rgba(18, 16, 13, 0.85);
+  border: 1px solid rgba(212, 167, 94, 0.2);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 35px;
+}
+
+.styles-box-title {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: #d4a75e;
+  margin-bottom: 14px;
+}
+
+.tattoo-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tattoo-style-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tattoo-style-tag strong {
+  font-size: 12px;
+  color: #f7e4c3;
+}
+
+.tattoo-style-tag small {
+  font-size: 9.5px;
+  color: #8c8578;
+}
+
+.tattoo-action-bar {
+  background: linear-gradient(135deg, rgba(34, 29, 24, 0.95) 0%, rgba(18, 16, 13, 0.98) 100%);
+  border: 1.5px solid #d4a75e;
+  border-radius: 16px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 35px rgba(212, 167, 94, 0.2);
+}
+
+.tattoo-action-left h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  color: #fff6e5;
+  margin: 0 0 6px;
+}
+
+.tattoo-action-left p {
+  font-size: 13px;
+  color: #a8a296;
+  margin: 0;
+  max-width: 620px;
+}
+
+.tattoo-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+  .tattoo-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tattoo-header {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .tattoo-action-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 20px;
+  }
+  .tattoo-action-btns {
+    width: 100%;
+    flex-direction: column;
+  }
+  .tattoo-action-btns button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .tattoo-features-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* ==========================================================================
+   📱 MOBILE BOOKING MODAL OPTIMIZATIONS (Send via WhatsApp Moved Upper)
+   ========================================================================== */
+@media (max-width: 600px) {
+  .modal-backdrop {
+    align-items: flex-start !important;
+    padding: 12px 10px 24px !important;
+    overflow-y: auto !important;
+  }
+  .booking-modal {
+    margin: 8px auto 20px !important;
+    padding: 20px 16px 18px !important;
+    max-height: none !important;
+    width: 100% !important;
+    border-radius: 18px !important;
+  }
+  .booking-modal h2,
+  .booking-modal-heading {
+    font-size: 24px !important;
+    margin: 4px 0 2px !important;
+  }
+  .booking-modal-kicker {
+    font-size: 8.5px !important;
+  }
+  .booking-modal-desc {
+    font-size: 11px !important;
+    margin-bottom: 8px !important;
+    line-height: 1.35 !important;
+  }
+  .booking-modal form {
+    gap: 8px !important;
+  }
+  .booking-modal label {
+    font-size: 9px !important;
+  }
+  .booking-modal input,
+  .booking-modal select {
+    padding: 8px 11px !important;
+    font-size: 12.5px !important;
+    margin-top: 3px !important;
+  }
+  .form-row {
+    gap: 8px !important;
+  }
+  .payment-select-group {
+    margin: 2px 0 4px !important;
+  }
+  .payment-group-header label {
+    font-size: 9px !important;
+  }
+  .payment-safety-badge {
+    font-size: 8.5px !important;
+  }
+  .payment-option-card {
+    padding: 7px 10px !important;
+  }
+  .payment-card-left strong {
+    font-size: 11.5px !important;
+  }
+  .payment-card-left small {
+    display: none !important;
+  }
+  .booking-submit-btn {
+    padding: 13px 15px !important;
+    margin-top: 6px !important;
+    font-size: 12.5px !important;
+    box-shadow: 0 4px 20px rgba(212, 167, 94, 0.45) !important;
+  }
+}
+
+/* ==========================================================================
+   ✕ BOOKING MODAL CLOSE CROSS (Easily Tappable at Right Corner)
+   ========================================================================== */
+.booking-modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #1c1813;
+  border: 1.5px solid #d4a75e;
+  color: #fae7c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 120;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9), 0 0 14px rgba(212, 167, 94, 0.35);
+  transition: all 0.2s ease;
+}
+
+.booking-modal-close-btn:hover,
+.booking-modal-close-btn:active {
+  background: #d4a75e;
+  color: #11100e;
+  transform: scale(1.08);
+  box-shadow: 0 0 22px rgba(212, 167, 94, 0.8);
+}
+
+@media (max-width: 600px) {
+  .booking-modal-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ==========================================================================
+   🖋️ SHORT & MINIMAL TATTOO SECTION STYLING
+   ========================================================================== */
+.tattoo-header-short {
+  margin-bottom: 24px;
+}
+
+.tattoo-desc-short {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #a8a296;
+  margin: 10px 0 0;
+  max-width: 680px;
+}
+
+.tattoo-quick-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.tattoo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 167, 94, 0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  color: #fae7c9;
+  font-weight: 600;
+}
+
+.tattoo-short-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .tattoo-short-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .tattoo-short-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}

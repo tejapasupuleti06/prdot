@@ -91,8 +91,15 @@ export default function BookingModal({ isOpen, onClose, defaultService = "" }) {
   return createPortal(
     <div className="modal-backdrop" onClick={handleResetAndClose} role="dialog" aria-modal="true">
       <div className="booking-modal" onClick={(e) => e.stopPropagation()}>
-        <button className="close" onClick={handleResetAndClose} aria-label="Close booking modal">
-          <X size={18} />
+        {/* Prominent, easy-to-tap Close Cross (✕) in the right corner */}
+        <button
+          type="button"
+          className="booking-modal-close-btn"
+          onClick={handleResetAndClose}
+          aria-label="Close reservation popup"
+          title="Close (✕)"
+        >
+          <X size={22} strokeWidth={2.5} />
         </button>
 
         {sent ? (
@@ -235,15 +242,6 @@ export default function BookingModal({ isOpen, onClose, defaultService = "" }) {
                   })}
                 </div>
               </div>
-
-              <label>
-                Special Requests or Notes (Optional)
-                <textarea
-                  placeholder="Hair texture, specific barber request, or haircut details..."
-                  value={formData.note}
-                  onChange={(e) => setFormData({ ...formData, note: e.target.value })}
-                />
-              </label>
 
               <button className="primary dark booking-submit-btn" type="submit">
                 <MessageCircle size={16} /> SEND VIA WHATSAPP <ArrowRight size={17} />

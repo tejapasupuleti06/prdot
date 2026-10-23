@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { ArrowRight, Check, Clock, Search, Scissors, Sparkles, X } from "lucide-react";
+import { ArrowRight, Check, Clock, Search, Scissors, X } from "lucide-react";
 import { services, serviceCategories } from "../data/salonData";
 
 export default function ServicesPopout({ isOpen, onClose, onSelectService }) {
@@ -47,7 +47,7 @@ export default function ServicesPopout({ isOpen, onClose, onSelectService }) {
               <Scissors size={14} /> OFFICIAL SALON SERVICE CATALOG
             </div>
             <h2>The Craft & Services Menu</h2>
-            <p>16 specialized grooming crafts from cuts and beard styling to spas, de-tan, and pedicures.</p>
+            <p>{services.length} specialized grooming crafts across 8 categories with transparent pricing.</p>
           </div>
 
           <button className="close popout-close-btn" onClick={onClose} aria-label="Close services">

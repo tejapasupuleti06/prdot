@@ -23,24 +23,26 @@ export default function CraftHubSection({ onOpenServices, onOpenPackages }) {
           <div className="hub-card-bg-glow" />
           <div className="hub-card-top">
             <span className="hub-badge">
-              <Scissors size={13} /> 6 CORE CRAFTS
+              <Scissors size={13} /> 8 SERVICE CATEGORIES
             </span>
-            <span className="hub-counter">FROM ₹100</span>
+            <span className="hub-counter">FROM ₹60</span>
           </div>
 
           <div className="hub-card-body">
             <div className="hub-big-icon">✂</div>
             <h3>Individual Services</h3>
             <p>
-              Hair cuts, skin fades, beard sculpts, gray coverage, relaxing hair spas, and deep-pore men's facials.
+              Hair cuts, stylish fades, beard trims, vibrant hair colours, facials, hair spas, massages, tattoos, and mani-pedi.
             </p>
 
             <div className="hub-preview-tags">
-              <span>Classic Cuts</span>
-              <span>Skin Fade</span>
-              <span>Beard Trim</span>
+              <span>Haircuts</span>
+              <span>Beard Shave</span>
+              <span>Hair Colour</span>
+              <span>Facials</span>
               <span>Hair Spa</span>
-              <span>De-Tan Facial</span>
+              <span>Massages</span>
+              <span>Tattoos</span>
             </div>
           </div>
 
@@ -83,6 +85,28 @@ export default function CraftHubSection({ onOpenServices, onOpenPackages }) {
             </button>
           </div>
         </div>
+      </div>
+
+      {/* Tattoo Showcase Banner down below Signature Packages */}
+      <div
+        className="hub-tattoo-strip"
+        onClick={() => {
+          const el = document.getElementById("tattoos");
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }}
+        role="button"
+        tabIndex={0}
+      >
+        <div className="hub-tattoo-left">
+          <span className="hub-tattoo-badge">✒️ INK STUDIO</span>
+          <div>
+            <h4>All Tattoos Are Also Available at PR Men Dot</h4>
+            <p>Custom permanent body art, 100% single-use sterile needles, bespoke stencils, and professional aftercare.</p>
+          </div>
+        </div>
+        <button type="button" className="hub-tattoo-btn">
+          EXPLORE TATTOOS <ArrowRight size={14} />
+        </button>
       </div>
     </section>
   );

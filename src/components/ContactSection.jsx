@@ -110,7 +110,7 @@ export default function ContactSection({ onOpenBooking }) {
           <div>
             <span className="map-badge">VISIT OUR CHAIR</span>
             <h3>Find PR Men Dot on Google Maps</h3>
-            <p>Raja Rajeswari Temple, Mithilapuri Colony, Madhurawada, Visakhapatnam 530041</p>
+            <p>{siteData.fullAddress}</p>
           </div>
           <a
             href={siteData.mapLink}
@@ -125,7 +125,7 @@ export default function ContactSection({ onOpenBooking }) {
         <div className="contact-map-frame">
           <iframe
             title="PR Men Dot Salon Location Map"
-            src="https://maps.google.com/maps?q=Pr+Men+Dot+Saloon+and+Beauty+Raja+Rajeswari+Temple+Mithilapuri+Colony+Madhurawada+Visakhapatnam&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=Police+Station+Road+APGV+Bank+SBI+Colony+Madhurawada+Bakkanapalem+Visakhapatnam+530048&t=&z=16&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="320"
             style={{ border: 0 }}

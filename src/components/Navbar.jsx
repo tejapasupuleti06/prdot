@@ -53,6 +53,7 @@ export default function Navbar({ onOpenBooking, onScrollTo, onOpenServices, onOp
         <button onClick={() => handleNavClick("home")}>HOME</button>
         <button onClick={handleServicesClick} className="nav-highlight-link">SERVICES</button>
         <button onClick={handlePackagesClick} className="nav-highlight-link">PACKAGES</button>
+        <button onClick={() => handleNavClick("tattoos")} className="nav-highlight-link nav-tattoo-link">TATTOOS</button>
         <button onClick={() => handleNavClick("gallery")}>GALLERY</button>
         <button onClick={() => handleNavClick("reviews")}>REVIEWS</button>
         <button onClick={() => handleNavClick("contact")}>CONTACT</button>

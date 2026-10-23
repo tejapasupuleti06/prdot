@@ -3,7 +3,7 @@ import {
   X,
   ArrowRight,
   ArrowLeft,
-  Sparkles,
+  Flame, Award,
   Wind,
   Droplets,
   Scissors,
@@ -12,7 +12,6 @@ import {
   Volume2,
   ChevronLeft,
   ChevronRight,
-  Flame,
   ShieldCheck,
   RotateCcw
 } from "lucide-react";

@@ -76,10 +76,44 @@ export default function Hero({
       </div>
 
       <div className="hero-content">
-        {/* Salon Tagline Pill */}
-        <div className="hero-copy animate-fade-in-1">
-          <Scissors size={14} className="hero-copy-icon" />
-          <span>{siteData.tagline}</span>
+        {/* Salon Tagline Pill with Hanging Signboard to its right */}
+        <div className="hero-tagline-signboard-row animate-fade-in-1">
+          <div className="hero-copy">
+            <Scissors size={14} className="hero-copy-icon" />
+            <span>{siteData.tagline}</span>
+          </div>
+
+          {/* Hanging Signboard: TATTOOS AVAILABLE (Moved to right side of tagline) */}
+          <div
+            className="hero-hanging-signboard"
+            onClick={() => (onScrollTo ? onScrollTo("tattoos") : null)}
+            role="button"
+            tabIndex={0}
+            title="PR Ink Studio — Tattoos Available! Click to view tattoo studio"
+          >
+            {/* Dual Hanging Chains */}
+            <div className="signboard-chain-mount">
+              <span className="signboard-mount-ring ring-left" />
+              <span className="signboard-chain chain-left" />
+              <span className="signboard-chain chain-right" />
+              <span className="signboard-mount-ring ring-right" />
+            </div>
+
+            {/* Signboard Plank */}
+            <div className="signboard-board">
+              <span className="signboard-rivet rivet-tl" />
+              <span className="signboard-rivet rivet-tr" />
+              <div className="signboard-content">
+                <span className="signboard-kicker">
+                  <span className="kicker-pen">✒️</span> PR INK STUDIO
+                </span>
+                <strong className="signboard-heading">TATTOOS AVAILABLE</strong>
+                <span className="signboard-sub">ALL CUSTOM DESIGNS • 100% STERILE</span>
+              </div>
+              <span className="signboard-rivet rivet-bl" />
+              <span className="signboard-rivet rivet-br" />
+            </div>
+          </div>
         </div>
 
         {/* Main Brand Title in Luminous Gold */}

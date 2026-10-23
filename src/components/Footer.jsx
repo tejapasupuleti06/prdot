@@ -31,6 +31,9 @@ export default function Footer({ onOpenBooking, onScrollTo, onOpenServices, onOp
           <button onClick={onOpenPackages} className="footer-link">
             PACKAGES
           </button>
+          <button onClick={() => onScrollTo("tattoos")} className="footer-link">
+            TATTOOS
+          </button>
           <button onClick={onOpenBooking} className="footer-link-highlight">
             BOOK A CHAIR
           </button>

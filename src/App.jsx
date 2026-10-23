@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import IntroPhilosophy from "./components/IntroPhilosophy";
 import CraftHubSection from "./components/CraftHubSection";
+import TattooSection from "./components/TattooSection";
 import TransformationSection from "./components/TransformationSection";
 import GallerySection from "./components/GallerySection";
 import ReviewsSection from "./components/ReviewsSection";
@@ -65,13 +66,16 @@ export default function App() {
             onOpenPackages={() => setPackagesPopoutOpen(true)}
             isIntroComplete={!showScissorsLoader}
           />
-          <IntroPhilosophy onScrollTo={scrollTo} />
+          <IntroPhilosophy onScrollTo={scrollTo} onOpenBooking={() => handleOpenBooking("")} />
           
           {/* Streamlined Interactive Gateway */}
           <CraftHubSection
             onOpenServices={() => setServicesPopoutOpen(true)}
             onOpenPackages={() => setPackagesPopoutOpen(true)}
           />
+
+          {/* Dedicated Tattoo Studio Section */}
+          <TattooSection onOpenBooking={() => handleOpenBooking("All Tattoos Available (Custom Ink)")} />
 
           <TransformationSection />
           <GallerySection onPreviewImage={(img) => setPreviewImage(img)} />
