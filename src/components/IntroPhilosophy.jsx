@@ -37,7 +37,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       headline: "Hand-Honed Convex Shears vs. Machine Clippers",
       sensation: "The rhythmic, crisp snip of hand-honed steel",
       desc: "Hand-honed Takefu Japanese cobalt shears for surgical slicing, zero split ends, and natural hair movement.",
-      craftDetail: "Honed to a surgical 45° convex angle for zero hair pulling, zero split ends, and featherlight point texturizing.",
+      craftDetail: "45° surgical convex angle for zero hair pulling & point detailing.",
       deepPhilosophy: "Most commercial salons use machine clippers for raw speed, which blunts hair ends horizontally and causes rough regrowth. We believe a bespoke hand-sheared cut gives hair natural movement, conforms to your cranial bone structure, and retains its shape for weeks without collapsing.",
       whyWeUseIt: "Hand-forged Takefu 440C cobalt alloy shears create a surgical 45-degree angle slice that prevents split ends, seals hair cuticle ends naturally, and creates soft organic feathering that grows out seamlessly over 4 to 6 weeks.",
       specs: [
@@ -60,7 +60,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       headline: "Controlled Tourmaline Heat & Volume Lock",
       sensation: "Warm targeted breeze lifting roots & sealing cuticles",
       desc: "110,000 RPM digital ionic dryer neutralizing frizz and sealing volume at a calibrated, gentle 57°C.",
-      craftDetail: "Equipped with precision directional nozzles that sculpt volume without heat damage or scalp irritation.",
+      craftDetail: "Calibrated 57°C airflow sculpting root volume with zero heat stress.",
       deepPhilosophy: "A cut is only as good as its thermal lock. Cheap salon hair dryers blast scorching, uncontrolled heat that blisters hair cuticles and leaves scalp stinging. Our digital brushless motor produces high-velocity airflow at a calibrated 57°C, neutralizing static with 20 million negative ions per cm³.",
       whyWeUseIt: "The micro-focused ionic airstream closes the microscopic scales of each hair shaft, reflecting natural light for editorial shine while lifting root follicles so your fade or textured crop stays elevated all day without stiff lacquer.",
       specs: [
@@ -83,7 +83,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       headline: "Pressurized Micro-Mist Hydration System",
       sensation: "Ultra-fine cool mist prepping hair for the razor",
       desc: "Continuous 0.3mm pressurized aloe vera mist evenly hydrating hair fibers for smooth, frictionless shearing.",
-      craftDetail: "Distributes micro-fine droplets that hydrate hair fibers without soaking your collar or running down your neck.",
+      craftDetail: "0.3mm suspended micro-mist hydrating fibers for smooth razor glide.",
       deepPhilosophy: "Standard squirt bottles drench the client unevenly, creating cold puddles that run down your neck and soak your collar. Our pressurized 0.3mm dispersal system atomizes purified water and aloe vera into a suspended cloud of micro-mist.",
       whyWeUseIt: "Even hydration allows our Japanese shears to glide effortlessly through hair strands without hair tugging or uneven cutting tension. The aloe vera extract calms the scalp and prepares the hair shaft for surgical sectioning.",
       specs: [
@@ -106,7 +106,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       headline: "Skeleton T-Blade Precision Architecture",
       sensation: "Low-hum vibration carving crisp edges & skin fades",
       desc: "7,200 SPM magnetic motor detailers calibrated to a 0.1mm zero-gap flush for crisp lines without irritation.",
-      craftDetail: "Equipped with Black Diamond Carbon blades that stay cool during long trims, providing irritation-free zero-gap precision.",
+      craftDetail: "Black Diamond DLC blade staying 40% cooler with 0.1mm flush precision.",
       deepPhilosophy: "Standard consumer trimmers snag on thick hair and generate friction heat against tender neck skin, causing razor burn. Our stations feature skeleton linear magnetic motor detailers calibrated to a true 0.1mm zero-gap flush.",
       whyWeUseIt: "Coated with Diamond-Like Carbon (DLC), the cutting teeth oscillate at 7,200 strokes per minute while operating 40% cooler. This allows our barbers to sculpt surgical hairlines, razor-sharp temple arches, and skin-tight fades with zero razor bumps.",
       specs: [
@@ -129,7 +129,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       headline: "Pliable Natural Hold & Cedarwood Aroma",
       sensation: "Warm cedarwood aroma & touchable matte texture",
       desc: "Natural volcanic bentonite clay & organic beeswax providing touchable matte hold with a warm cedarwood aroma.",
-      craftDetail: "Washes out clean with plain water. Enriched with cedarwood, amber, and bentonite clay for a textured, thicker hair appearance.",
+      craftDetail: "Natural bentonite & organic beeswax washing out cleanly with water.",
       deepPhilosophy: "Supermarket hair gels suffocate scalp pores with synthetic petroleum silicones, causing dandruff and artificial helmet hair. We formulate our styling clay with natural volcanic bentonite and organic beeswax enriched with cedarwood, amber, and argan oils.",
       whyWeUseIt: "Hand-warmed between the barber's palms, it coats each strand with invisible textured volume, giving you touchable memory you can reshape all day long, and rinses out completely in a single warm water wash.",
       specs: [
@@ -152,7 +152,7 @@ export default function IntroPhilosophy({ onScrollTo, onOpenBooking }) {
       headline: "Aromatherapy Hot Steam Facial Wrap",
       sensation: "120°F soothing steam melting away daily tension",
       desc: "120°F plush Turkish cotton towel infused with calming eucalyptus steam to soften whiskers and relieve stress.",
-      craftDetail: "Softens coarse hair follicles for a frictionless straight-razor shave while releasing neck and facial tension.",
+      craftDetail: "600 GSM Turkish cotton softening whiskers for frictionless shaving.",
       deepPhilosophy: "More than skin preparation, the hot towel wrap is a sensory sanctuary. We infuse 100% long-staple Turkish cotton towels with organic eucalyptus and lavender botanicals, calibrated to a therapeutic 120°F (49°C).",
       whyWeUseIt: "When wrapped over your facial contours, the moist herbal heat softens coarse beard whiskers by 65% for frictionless single-stroke shaving, opens pores for detoxifying face scrubs, and soothes eye strain and mental fatigue.",
       specs: [

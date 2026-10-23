@@ -1489,6 +1489,7 @@ a {
   user-select: none;
   -webkit-user-select: none;
   box-sizing: border-box;
+  overflow: hidden;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1744,6 +1745,17 @@ a {
   line-height: 1.5;
   color: #ded7cb;
   margin-bottom: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.tool-craft-spec span {
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
 }
 
 .tool-craft-spec .gold-icon {
@@ -5893,7 +5905,13 @@ a {
   align-items: center !important;
   box-sizing: border-box !important;
   height: 100% !important;
-  transition: transform 0.35s ease, filter 0.35s ease !important;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 0);
 }
 
 .skiper49-card-slide:not(.swiper-slide-active) {
@@ -5932,16 +5950,98 @@ a {
 
 @media (max-width: 640px) {
   .skiper49-cards-wrap {
-    gap: 6px;
+    gap: 4px;
     padding: 0 2px;
   }
   .skiper49-swiper {
     width: 100% !important;
-    height: clamp(495px, 63vh, 545px) !important;
+    height: clamp(490px, 64vh, 550px) !important;
     padding: 10px 0 36px !important;
+    touch-action: pan-y pinch-zoom;
+    -webkit-user-select: none;
+    user-select: none;
   }
   .skiper49-card-slide {
     width: min(300px, 80vw) !important;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+  }
+  .skiper49-card-slide .skiper-tool-card {
+    padding: 18px 16px 14px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    height: 100% !important;
+    border-radius: 20px !important;
+  }
+  .skiper49-card-slide .tool-card-top {
+    margin-bottom: 6px !important;
+  }
+  .skiper49-card-slide .tool-icon-stage {
+    padding: 4px 0 8px !important;
+  }
+  .skiper49-card-slide .tool-icon-circle {
+    width: 56px !important;
+    height: 56px !important;
+  }
+  .skiper49-card-slide .tool-svg {
+    width: 34px !important;
+    height: 34px !important;
+  }
+  .skiper49-card-slide .tool-name {
+    font-size: 17px !important;
+    line-height: 1.25 !important;
+    margin: 0 0 5px 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+  .skiper49-card-slide .tool-sensation-bar {
+    padding: 4px 8px !important;
+    margin-bottom: 6px !important;
+  }
+  .skiper49-card-slide .sensation-text {
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+  }
+  .skiper49-card-slide .tool-desc {
+    font-size: 11.5px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 6px !important;
+    flex-grow: 0 !important;
+  }
+  .skiper49-card-slide .tool-craft-spec {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 7px 10px !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    margin-top: auto !important;
+    margin-bottom: 6px !important;
+    overflow: hidden !important;
+    word-break: break-word !important;
+    border-radius: 0 6px 6px 0 !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    border-left: 2px solid #d4a75e !important;
+  }
+  .skiper49-card-slide .tool-craft-spec span {
+    flex: 1 !important;
+    min-width: 0 !important;
+    word-break: break-word !important;
+  }
+  .skiper49-card-slide .skiper-card-action-bar {
+    padding-top: 8px !important;
+    margin-top: 0 !important;
+  }
+  .skiper49-card-slide .skiper-sound-preview {
+    font-size: 9.5px !important;
+    display: inline-flex !important;
+    max-width: 100% !important;
   }
 }
 

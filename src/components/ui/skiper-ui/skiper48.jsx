@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import {
   ChevronLeft,
   ChevronRight,
-  Sparkles,
+  Award,
   ArrowRight,
   CheckCircle2,
   Volume2
@@ -134,7 +134,7 @@ export default function Skiper48Cards({
                       }}
                       title="Open full interactive lab & sound test"
                     >
-                      <Sparkles size={12} />
+                      <Award size={12} />
                       <span>SENSORY LAB</span>
                       <ArrowRight size={13} />
                     </button>

@@ -58,15 +58,21 @@ export default function Skiper49Cards({
           grabCursor={true}
           centeredSlides={true}
           slidesPerView="auto"
-          speed={450}
+          speed={380}
+          touchRatio={1.15}
+          touchAngle={45}
+          threshold={5}
+          resistance={true}
+          resistanceRatio={0.7}
+          watchSlidesProgress={true}
           observer={true}
           observeParents={true}
           coverflowEffect={{
-            rotate: 28,
+            rotate: 18,
             stretch: 0,
-            depth: 110,
+            depth: 85,
             modifier: 1,
-            slideShadows: true,
+            slideShadows: false,
           }}
           modules={[EffectCoverflow, Navigation, Pagination]}
           pagination={{

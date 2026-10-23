@@ -498,7 +498,7 @@ export default function ToolSensoryModal({
                 className={`sensory-trigger-btn ${isSimulating ? "active-trigger" : ""}`}
                 onClick={triggerSensorySimulation}
               >
-                <Sparkles size={16} className="gold-sparkle" />
+                <Zap size={16} className="gold-sparkle" />
                 <span>
                   {isSimulating
                     ? tool.triggerActionText || "SENSORY SIMULATION ACTIVE..."
@@ -560,7 +560,7 @@ export default function ToolSensoryModal({
             {tool.specs && tool.specs.length > 0 && (
               <div className="info-specs-section">
                 <h5 className="info-subheading">
-                  <Sparkles size={15} className="gold-icon" />
+                  <Award size={15} className="gold-icon" />
                   TECHNICAL ARTISAN SPECIFICATIONS
                 </h5>
                 <div className="specs-grid">
