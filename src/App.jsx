@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import IntroPhilosophy from "./components/IntroPhilosophy";
@@ -107,6 +108,8 @@ export default function App() {
         image={previewImage}
         onClose={() => setPreviewImage(null)}
       />
+
+      <Analytics />
     </>
   );
 }
