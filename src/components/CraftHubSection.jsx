@@ -1,19 +1,28 @@
 import React from "react";
-import { ArrowRight, Scissors, Crown, Tag } from "lucide-react";
+import { ArrowRight, Scissors, ShieldCheck } from "lucide-react";
 
-export default function CraftHubSection({ onOpenServices, onOpenPackages }) {
+export default function CraftHubSection({ onOpenServices, onScrollTo }) {
+  const handleInkStudioClick = () => {
+    if (onScrollTo) {
+      onScrollTo("tattoos");
+    } else {
+      const el = document.getElementById("tattoos");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="menu-hub" className="craft-hub section dark-section">
       <div className="hub-head">
         <div>
           <h2>
-            Two Ways to Groom.
+            Two Signature Studios.
             <br />
-            <em>Pick your craft or bundle.</em>
+            <em>Master Grooming & Bespoke Ink.</em>
           </h2>
         </div>
         <p>
-          Explore individual treatments tailored to precision, or select curated combo packages created for maximum style and savings.
+          Explore 41 precision salon & beauty treatments tailored to your style, or step into PR Ink Studio for bespoke permanent body art and piercing.
         </p>
       </div>
 
@@ -30,9 +39,9 @@ export default function CraftHubSection({ onOpenServices, onOpenPackages }) {
 
           <div className="hub-card-body">
             <div className="hub-big-icon">✂</div>
-            <h3>Individual Services</h3>
+            <h3>Saloon & Beauty</h3>
             <p>
-              Hair cuts, stylish fades, beard trims, vibrant hair colours, facials, hair spas, massages, tattoos, and mani-pedi.
+              Hair cuts, stylish fades, beard trims, vibrant hair colours, de-tan facials, hair spas, soothing massages, and mani-pedi.
             </p>
 
             <div className="hub-preview-tags">
@@ -42,7 +51,7 @@ export default function CraftHubSection({ onOpenServices, onOpenPackages }) {
               <span>Facials</span>
               <span>Hair Spa</span>
               <span>Massages</span>
-              <span>Tattoos</span>
+              <span>Mani-Pedi</span>
             </div>
           </div>
 
@@ -53,60 +62,41 @@ export default function CraftHubSection({ onOpenServices, onOpenPackages }) {
           </div>
         </div>
 
-        {/* Gateway Card 2: Curated Packages */}
-        <div className="hub-card hub-card-packages" onClick={onOpenPackages}>
+        {/* Gateway Card 2: PR Ink Studio (Custom Tattoos & Piercing) */}
+        <div className="hub-card hub-card-packages hub-card-ink" onClick={handleInkStudioClick}>
           <div className="hub-card-bg-glow glow-gold" />
           <div className="hub-card-top">
             <span className="hub-badge badge-gold">
-              <Tag size={13} /> POPULAR DEALS
+              <span className="tattoo-icon">✒️</span> PR INK STUDIO
             </span>
-            <span className="hub-counter counter-gold">SAVE UP TO 35%</span>
+            <span className="hub-counter counter-gold">
+              <ShieldCheck size={12} className="inline mr-1" /> 100% STERILE NEEDLES
+            </span>
           </div>
 
           <div className="hub-card-body">
-            <div className="hub-big-icon icon-gold">
-              <Crown size={42} strokeWidth={1.8} />
-            </div>
-            <h3>Signature Packages</h3>
+            <div className="hub-big-icon icon-gold">✒️</div>
+            <h3>PR Ink Studio</h3>
             <p>
-              Curated grooming combos combining haircut, beard steam, de-tan cleanup, and head massage for a complete upgrade.
+              Custom permanent tattoos, minimalist line work, portraits, bespoke stencils, single-use sterile needles, plus gunshot piercing (₹150).
             </p>
 
             <div className="hub-preview-tags tags-gold">
-              <span>Executive Combo (₹399)</span>
-              <span>Royal De-Tan (₹799)</span>
-              <span>Groom Special (₹1,499)</span>
+              <span>Custom Tattoos</span>
+              <span>Minimalist Line Art</span>
+              <span>Religious & Names</span>
+              <span>Gunshot (₹150)</span>
+              <span>Sterile Needles</span>
+              <span>Safe Aftercare</span>
             </div>
           </div>
 
           <div className="hub-card-footer">
             <button className="hub-trigger-btn btn-gold" type="button">
-              EXPLORE PACKAGES & COMBOS <ArrowRight size={16} />
+              EXPLORE INK STUDIO & TATTOOS <ArrowRight size={16} />
             </button>
           </div>
         </div>
-      </div>
-
-      {/* Tattoo Showcase Banner down below Signature Packages */}
-      <div
-        className="hub-tattoo-strip"
-        onClick={() => {
-          const el = document.getElementById("tattoos");
-          if (el) el.scrollIntoView({ behavior: "smooth" });
-        }}
-        role="button"
-        tabIndex={0}
-      >
-        <div className="hub-tattoo-left">
-          <span className="hub-tattoo-badge">✒️ INK STUDIO</span>
-          <div>
-            <h4>All Tattoos Are Also Available at PR Men Dot</h4>
-            <p>Custom permanent body art, 100% single-use sterile needles, bespoke stencils, and professional aftercare.</p>
-          </div>
-        </div>
-        <button type="button" className="hub-tattoo-btn">
-          EXPLORE TATTOOS <ArrowRight size={14} />
-        </button>
       </div>
     </section>
   );

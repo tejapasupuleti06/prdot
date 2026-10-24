@@ -9,7 +9,6 @@ export default function Hero({
   onOpenBooking, 
   onScrollTo, 
   onOpenServices, 
-  onOpenPackages,
   isIntroComplete = false 
 }) {
   const heroTools = useRef([]);

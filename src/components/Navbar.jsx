@@ -3,7 +3,7 @@ import { ArrowUpRight, Menu, Phone, X } from "lucide-react";
 import { siteData } from "../data/salonData";
 import { getSalonStatus } from "../utils/salonHours";
 
-export default function Navbar({ onOpenBooking, onScrollTo, onOpenServices, onOpenPackages }) {
+export default function Navbar({ onOpenBooking, onScrollTo, onOpenServices }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [status, setStatus] = useState(getSalonStatus());
@@ -34,10 +34,6 @@ export default function Navbar({ onOpenBooking, onScrollTo, onOpenServices, onOp
     onOpenServices();
   };
 
-  const handlePackagesClick = () => {
-    setMenuOpen(false);
-    onOpenPackages();
-  };
 
   return (
     <header className={`nav ${scrolled ? "scrolled" : ""}`}>
@@ -52,8 +48,7 @@ export default function Navbar({ onOpenBooking, onScrollTo, onOpenServices, onOp
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
         <button onClick={() => handleNavClick("home")}>HOME</button>
         <button onClick={handleServicesClick} className="nav-highlight-link">SERVICES</button>
-        <button onClick={handlePackagesClick} className="nav-highlight-link">PACKAGES</button>
-        <button onClick={() => handleNavClick("tattoos")} className="nav-highlight-link nav-tattoo-link">TATTOOS</button>
+        <button onClick={() => handleNavClick("tattoos")} className="nav-highlight-link nav-tattoo-link">INK STUDIO</button>
         <button onClick={() => handleNavClick("gallery")}>GALLERY</button>
         <button onClick={() => handleNavClick("reviews")}>REVIEWS</button>
         <button onClick={() => handleNavClick("contact")}>CONTACT</button>

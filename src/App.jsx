@@ -12,7 +12,6 @@ import Footer from "./components/Footer";
 import BookingModal from "./components/BookingModal";
 import ImageLightbox from "./components/ImageLightbox";
 import ServicesPopout from "./components/ServicesPopout";
-import PackagesPopout from "./components/PackagesPopout";
 import MobileQuickBar from "./components/MobileQuickBar";
 import ScissorsLoader from "./components/ScissorsLoader";
 import "./styles.css";
@@ -22,7 +21,6 @@ export default function App() {
   const [pagePopped, setPagePopped] = useState(false);
   const [bookingOpen, setBookingOpen] = useState(false);
   const [servicesPopoutOpen, setServicesPopoutOpen] = useState(false);
-  const [packagesPopoutOpen, setPackagesPopoutOpen] = useState(false);
   const [previewImage, setPreviewImage] = useState(null);
   const [bookingDefaultService, setBookingDefaultService] = useState("");
 
@@ -55,7 +53,6 @@ export default function App() {
           onOpenBooking={() => handleOpenBooking("")}
           onScrollTo={scrollTo}
           onOpenServices={() => setServicesPopoutOpen(true)}
-          onOpenPackages={() => setPackagesPopoutOpen(true)}
         />
 
         <main>
@@ -63,15 +60,14 @@ export default function App() {
             onOpenBooking={() => handleOpenBooking("")}
             onScrollTo={scrollTo}
             onOpenServices={() => setServicesPopoutOpen(true)}
-            onOpenPackages={() => setPackagesPopoutOpen(true)}
             isIntroComplete={!showScissorsLoader}
           />
           <IntroPhilosophy onScrollTo={scrollTo} onOpenBooking={() => handleOpenBooking("")} />
           
-          {/* Streamlined Interactive Gateway */}
+          {/* Streamlined Interactive Gateway: Saloon Services & PR Ink Studio */}
           <CraftHubSection
             onOpenServices={() => setServicesPopoutOpen(true)}
-            onOpenPackages={() => setPackagesPopoutOpen(true)}
+            onScrollTo={scrollTo}
           />
 
           {/* Dedicated Tattoo Studio Section */}
@@ -87,7 +83,6 @@ export default function App() {
           onOpenBooking={() => handleOpenBooking("")}
           onScrollTo={scrollTo}
           onOpenServices={() => setServicesPopoutOpen(true)}
-          onOpenPackages={() => setPackagesPopoutOpen(true)}
         />
 
         {/* Floating Thumb Quick Action Bar for Mobile & Tablet */}
@@ -101,11 +96,6 @@ export default function App() {
         onSelectService={(serviceTitle) => handleOpenBooking(serviceTitle)}
       />
 
-      <PackagesPopout
-        isOpen={packagesPopoutOpen}
-        onClose={() => setPackagesPopoutOpen(false)}
-        onSelectCombo={(comboTitle) => handleOpenBooking(comboTitle)}
-      />
 
       <BookingModal
         isOpen={bookingOpen}

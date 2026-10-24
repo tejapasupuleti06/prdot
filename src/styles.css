@@ -6332,6 +6332,22 @@ a {
 /* ==========================================================================
    🖋️ FULL DEDICATED TATTOO SECTION
    ========================================================================== */
+.scroll-anchor {
+  position: absolute;
+  top: -85px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hub-card-ink {
+  border-color: rgba(212, 167, 94, 0.35) !important;
+}
+
+.hub-card-ink:hover {
+  border-color: #d4a75e !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(212, 167, 94, 0.28) !important;
+}
+
 .tattoo-section {
   padding: 90px 0 80px;
   position: relative;

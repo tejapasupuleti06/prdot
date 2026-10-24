@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { ArrowRight, Check, MessageCircle, Phone, X } from "lucide-react";
-import { services, comboOffers, siteData } from "../data/salonData";
+import { services, siteData } from "../data/salonData";
 
 export default function BookingModal({ isOpen, onClose, defaultService = "" }) {
   const [formData, setFormData] = useState({
@@ -75,10 +75,10 @@ export default function BookingModal({ isOpen, onClose, defaultService = "" }) {
     onClose();
   };
 
-  // Combine services and combos for dropdown
+  // Curated salon services + Tattoo consultation for reservation dropdown
   const allServiceOptions = [
     ...services.map((s) => ({ label: `${s.title} (${s.price})`, value: s.title })),
-    ...comboOffers.map((c) => ({ label: `Combo: ${c.title} (${c.price})`, value: c.title }))
+    { label: "PR Ink Studio — Custom Tattoos & Consultation", value: "All Tattoos Available (Custom Ink)" }
   ];
 
   // Curated 30-minute interval slots matching salon hours (8:30 AM - 10:00 PM)

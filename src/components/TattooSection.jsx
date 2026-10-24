@@ -12,6 +12,7 @@ export default function TattooSection({ onOpenBooking }) {
 
   return (
     <section id="tattoos" className="tattoo-section section dark-section">
+      <span id="ink-studio" className="scroll-anchor" />
       <div className="tattoo-container">
         {/* Top Kicker */}
         <div className="tattoo-badge-row">
@@ -47,11 +48,11 @@ export default function TattooSection({ onOpenBooking }) {
           </div>
           <div className="tattoo-chip">
             <CheckCircle2 size={14} className="gold-icon" />
-            <span>Skin-Safe Imported Inks</span>
+            <span>Gunshot Piercing (₹150)</span>
           </div>
           <div className="tattoo-chip">
             <CheckCircle2 size={14} className="gold-icon" />
-            <span>Full Healing Aftercare</span>
+            <span>Skin-Safe Inks & Aftercare</span>
           </div>
         </div>
 
